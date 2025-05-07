@@ -1,0 +1,83 @@
+/* HeroSection.module.css */
+
+.hero-container {
+  background-color: #000; /* Fondo negro intenso */
+  color: #fff; /* Texto blanco para contraste */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Ajusta la altura según necesites */
+  padding: 0 30px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6); /* Overlay oscuro para legibilidad del texto sobre el video */
+}
+
+/* Si tienes un video de fondo */
+/* .hero-container video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+} */
+
+.hero-container h1 {
+  font-size: 4rem; /* Título grande e impactante */
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase; /* Énfasis en el título */
+  letter-spacing: 2px;
+}
+
+.hero-container p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 300; /* Más ligero para el subtítulo */
+  color: #ddd; /* Gris claro para suavizar un poco */
+}
+
+.hero-btns {
+  display: flex;
+}
+
+.hero-btns .btns {
+  margin: 0 10px;
+}
+
+/* Puedes añadir estilos específicos si necesitas diferenciar
+   los botones dentro de esta sección, aunque ya tienen
+   estilos definidos por el componente Button. */
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  .hero-container h1 {
+    font-size: 3rem;
+  }
+
+  .hero-container p {
+    font-size: 1.2rem;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-btns .btns {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-container p {
+    font-size: 1rem;
+  }
+}

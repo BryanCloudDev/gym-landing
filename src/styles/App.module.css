@@ -1,0 +1,44 @@
+/* App.module.css */
+:global(*) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:global(html, body) {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+:global(img) {
+  max-width: 100%;
+  display: block;
+}
+
+:global(a) {
+  text-decoration: none;
+  color: inherit;
+}
+
+:global(ul) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+:global(button) {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

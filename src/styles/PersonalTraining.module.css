@@ -1,0 +1,68 @@
+.training-container {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.training-wrapper {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+
+.training-img {
+  flex: 1 1 400px;
+}
+
+.training-img img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.training-content {
+  flex: 1 1 400px;
+}
+
+.training-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.training-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.training-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.training-list li {
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.training-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #e63946;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.training-btn:hover {
+  background-color: #d62828;
+  text-decoration: none;
+}
