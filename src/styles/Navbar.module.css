@@ -31,7 +31,7 @@
   width: 30px;
   height: 24px;
   position: relative;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
