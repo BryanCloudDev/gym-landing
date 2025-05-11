@@ -1,140 +1,146 @@
-.footer-container {
-  background-color: #242424;
-  color: #fff;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.column {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1.5rem;
 }
 
-.footer-links {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 1000px;
-  margin-bottom: 2rem;
-}
-
-.footer-link-wrapper {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.footer-link-items {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 1rem;
-  text-align: left;
-}
-
-.footer-link-items h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+.logo {
+  font-size: 1.8rem;
+   font-family: 'Ethnocentric', sans-serif;
   color: #fff;
 }
 
-.footer-link-items a {
-  color: #fff;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #96999F;
+  margin: 0;
 }
 
-.footer-link-items a:hover {
-  color: #ff4500;
-  transition: 0.3s ease-out;
-}
-
-.social-media {
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.social-media-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.footer-logo {
-  margin-bottom: 1rem;
-}
-
-.social-logo {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.website-rights {
-  color: #fff;
-  margin-bottom: 1rem;
-  font-size: 0.8rem;
-}
-
-.social-icons {
+.social {
   display: flex;
   gap: 1rem;
 }
 
-.social-icon-link {
-  color: #fff;
-  font-size: 1.5rem;
-  border-radius: 50%;
+.socialLink {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 2.5rem;
-  width: 2.5rem;
-  transition: background 0.3s ease;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: all 0.3s ease;
 }
 
-.social-icon-link:hover {
-  background: #ff4500;
+.socialLink:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
 }
 
-.facebook {
-  background: #3b5998;
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
 }
 
-.instagram {
-  background: #e4405f;
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-.twitter {
-  background: #00acee;
+.links a {
+  color: #96999F;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.youtube {
-  background: #cd201f;
+.links a:hover {
+  color: var(--primary-color);
 }
 
-@media screen and (max-width: 820px) {
-  .footer-links {
-    padding-top: 2rem;
+.hours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.hours li {
+  display: flex;
+  justify-content: space-between;
+  color: #96999F;
+}
+
+.bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  color: #96999F;
+  margin: 0;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.bottomLinks a {
+  color: #96999F;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bottomLinks a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
   }
 
-  .footer-link-wrapper {
+  .bottom {
     flex-direction: column;
-  }
-
-  .social-media-wrap {
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .footer-link-items {
-    align-items: center;
-    margin: 0;
+    gap: 1rem;
     text-align: center;
   }
 }

@@ -1,49 +1,97 @@
-import { type Testimonial } from '../types';
-import styles from '../styles/Testimonials.module.css'; // Importa los estilos como un objeto
+import React from 'react';
+import styles from '../styles/Testimonials.module.css';
+
+interface Testimonial {
+  id: number;
+  name: string;
+  role: string;
+  content: string;
+  image: string;
+}
 
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'Sarah Johnson',
-    text: '¡El programa de entrenamiento personalizado transformó mi cuerpo y mi confianza! Perdí 9 kilos en 3 meses y gané fuerza.',
-    rating: 5
+    name: "Larry Moore",
+    role: "Bodybuilder",
+    content: "Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim. Adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua ut enim.",
+    image: "/public/testi-1-copyright.jpg"
   },
   {
     id: 2,
-    name: 'Michael Chen',
-    text: 'La mejor inversión en mi salud. Mi entrenador personalizó mi plan y logré mejorar mi tiempo en maratón por 15 minutos.',
-    rating: 5
+    name: "Gloria Gordon",
+    role: "Client",
+    content: "Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim. Adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua ut enim.",
+    image: "/public/testi-2-copyright.jpg"
   },
   {
     id: 3,
-    name: 'Emma Rodriguez',
-    text: 'Después de años en diferentes gimnasios, finalmente encontré un programa que realmente funciona. ¡La atención al detalle es increíble!',
-    rating: 4
+    name: "Jennifer Lee",
+    role: "Client",
+    content: "Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim. Adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua ut enim.",
+    image: "/public/testi-3-copyright.jpg"
   }
 ];
 
-const Testimonials = () => {
+const Testimonials: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+
+  const nextTestimonial = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevTestimonial = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
-    <section className={styles['testimonials-container']}>
-      <h1 className={styles['testimonials-title']}>LO QUE DICEN NUESTROS CLIENTES</h1>
-      <div className={styles['testimonials-wrapper']}>
-        {testimonials.map((testimonial) => (
-          <div className={styles['testimonial-card']} key={testimonial.id}>
-            <div className={styles['testimonial-rating']}>
-              {[...Array(testimonial.rating)].map((_, i) => (
-                <span key={i}>★</span>
-              ))}
+    <section className={styles.testimonials}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <span className={styles.subtitle}>what we offer</span>
+          <h2 className={styles.title}>Achieve amazing results with our services</h2>
+        </div>
+
+        <div className={styles.slider}>
+          <div className={styles.testimonial}>
+            <div className={styles.imageWrapper}>
+              <img 
+                src={testimonials[currentIndex].image} 
+                alt={testimonials[currentIndex].name} 
+                className={styles.image}
+              />
             </div>
-            <blockquote className={styles['testimonial-text']}>
-              "{testimonial.text}"
-            </blockquote>
-            <cite className={styles['testimonial-name']}>- {testimonial.name}</cite>
+            <p className={styles.content}>{testimonials[currentIndex].content}</p>
+            <div className={styles.author}>
+              <h4 className={styles.name}>{testimonials[currentIndex].name}</h4>
+              <span className={styles.role}>{testimonials[currentIndex].role}</span>
+            </div>
           </div>
-        ))}
+
+          <div className={styles.controls}>
+            <button 
+              className={`${styles.control} ${styles.prev}`}
+              onClick={prevTestimonial}
+              aria-label="Previous testimonial"
+            >
+              ←
+            </button>
+            <button 
+              className={`${styles.control} ${styles.next}`}
+              onClick={nextTestimonial}
+              aria-label="Next testimonial"
+            >
+              →
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
-
 
 export default Testimonials;

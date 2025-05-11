@@ -1,83 +1,96 @@
-/* HeroSection.module.css */
-
-.hero-container {
-  background-color: #000; /* Fondo negro intenso */
-  color: #fff; /* Texto blanco para contraste */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url('../assets/images/hero.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh; /* Ajusta la altura según necesites */
-  padding: 0 30px;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6); /* Overlay oscuro para legibilidad del texto sobre el video */
+  justify-content: flex-end;
+  padding: 0 65px;
+  color: #ffffff;
 }
 
-/* Si tienes un video de fondo */
-/* .hero-container video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-} */
-
-.hero-container h1 {
-  font-size: 4rem; /* Título grande e impactante */
-  margin-bottom: 1rem;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase; /* Énfasis en el título */
-  letter-spacing: 2px;
+.content {
+  margin-bottom: 185px;
+  max-width: 50%;
 }
 
-.hero-container p {
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-  text-align: center;
-  font-weight: 300; /* Más ligero para el subtítulo */
-  color: #ddd; /* Gris claro para suavizar un poco */
-}
-
-.hero-btns {
+.title {
+  font-size: 7.55vw;
+  line-height: 7.09vw;
+  margin: 0;
   display: flex;
+  flex-direction: column;
 }
 
-.hero-btns .btns {
-  margin: 0 10px;
+.title span {
+  display: block;
 }
 
-/* Puedes añadir estilos específicos si necesitas diferenciar
-   los botones dentro de esta sección, aunque ya tienen
-   estilos definidos por el componente Button. */
+.hero .content .title .outline {
+  color: transparent;
+  -webkit-text-stroke: 2px #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
 
-/* Estilos responsivos */
-@media screen and (max-width: 768px) {
-  .hero-container h1 {
-    font-size: 3rem;
+
+.arrow {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  margin-top: 5px;
+}
+
+@media (max-width: 1279px) {
+  .hero {
+    padding: 0 30px;
   }
 
-  .hero-container p {
-    font-size: 1.2rem;
+  .content {
+    max-width: 66%;
   }
 
-  .hero-btns {
-    flex-direction: column;
-    align-items: center;
+  .title {
+    font-size: 9vw;
+    line-height: 8.5vw;
+    letter-spacing: -0.02em;
   }
 
-  .hero-btns .btns {
-    margin: 10px 0;
+  .scrollDown {
+    right: 7px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .hero-container h1 {
-    font-size: 2.5rem;
+@media (max-width: 767px) {
+  .hero {
+    padding: 0 20px;
   }
 
-  .hero-container p {
-    font-size: 1rem;
+  .content {
+    margin-top: 28vh;
+    margin-bottom: -35vh;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 11vw;
+    letter-spacing: 0;
+  }
+
+  .scrollDown {
+    right: 19px;
+    bottom: -4px;
+  }
+
+  .tags {
+    font-size: 13px;
+    bottom: 75px;
   }
 }

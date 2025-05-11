@@ -1,39 +1,63 @@
+import React from 'react';
+
 import styles from '../styles/Features.module.css';
 
+interface FeatureProps {
+  icon: string;
+  title: string;
+  description: string;
+}
 
-const Features = () => {
-    return (
-          <section className={styles.overviewSection} id="sobre">
-      <div className={styles.container}>
-        <h2 className={styles.title}>SERVICIOS EXCLUSIVOS PARA TI</h2>
-        <p className={styles.subtitle}>
-          Descubre todo lo que ofrecemos para ayudarte a alcanzar tus objetivos.
-        </p>
-        <div className={styles.servicesGrid}>
-          <div className={styles.card}>
-            <h3>Entrenamiento Personalizado</h3>
-            <p>Sesiones uno a uno con entrenadores expertos para maximizar tu rendimiento.</p>
-          </div>
-          <div className={styles.card}>
-            <h3>Terapia Deportiva</h3>
-            <p>Prevención de lesiones, recuperación y mejora del rendimiento físico.</p>
-          </div>
-          <div className={styles.card}>
-            <h3>Planes Personalizados en Línea</h3>
-            <p>Entrena desde cualquier lugar con asesoramiento virtual y seguimiento continuo.</p>
-          </div>
-          <div className={styles.card}>
-            <h3>Nutrición</h3>
-            <p>Guías alimenticias adaptadas a tus metas y estilo de vida.</p>
-          </div>
-          <div className={styles.card}>
-            <h3>Pase Diario al Gimnasio</h3>
-            <p>Acceso exclusivo por un día, entrena a tu ritmo en un area exclusiva.</p>
-          </div>
-        </div>
+const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
+  <div className={styles.feature}>
+    <div className={styles.icon}>{icon}</div>
+    <h3 className={styles.title}>{title}</h3>
+    <p className={styles.description}>{description}</p>
+  </div>
+);
+
+const Features: React.FC = () => {
+  const features = [
+    {
+      icon: '🏋️',
+      title: 'Personalized training',
+      description: 'One on one training with an expert personal trainer.'
+    },
+    {
+      icon: '💆',
+      title: 'Sports therapy',
+      description: 'Prevent injuries and recover faster and improve performance.'
+    },
+     {
+      icon: '🌐',
+      title: 'Personalized online training',
+      description: 'Train from anywhere with virtual guidance and continuous monitoring.'
+    },
+    {
+      icon: '🥗',
+      title: 'Nutrition plan',
+      description: 'Consectetur adipiscing elit, sed do eiusmod tempo.'
+    },
+    {
+      icon: '📅',
+      title: 'Day pass',
+      description: 'Exclusive one-day access — train at your own pace in a private area.'
+    }
+  ];
+
+  return (
+    <section id="features" className={styles.features}>
+      <h2 className={styles.sectionTitle}>
+        <span className={styles.subtitle}>what we offer</span>
+        Achieve amazing results with our services
+      </h2>
+      <div className={styles.featureList}>
+        {features.map((feature, index) => (
+          <Feature key={index} {...feature} />
+        ))}
       </div>
     </section>
-    );
+  );
 };
 
 export default Features;

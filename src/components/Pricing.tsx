@@ -1,80 +1,80 @@
-// src/components/Pricing.tsx
-import { type PricingPlan } from '../types';
-import styles from '../styles/Pricing.module.css';
+import React from 'react';
 
-const plans: PricingPlan[] = [
+import styles from '../styles/Pricing.module.css';
+import Button from './Button';
+
+interface PricingPlan {
+  id: number;
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  isPopular?: boolean;
+}
+
+const pricingPlans: PricingPlan[] = [
   {
-    name: 'BÁSICO',
-    price: '$99',
-    period: '/mes',
-    features: [
-      '4 sesiones de entrenamiento',
-      'Plan de entrenamiento básico',
-      'Soporte por correo electrónico',
-      'Seguimiento del progreso'
-    ],
-    popular: false
+    id: 1,
+    name: "Basic",
+    price: "$55.55",
+    period: "Per month",
+    description: "Adipiscing elit sed do eusmod tempor incididunt ut labore et."
   },
   {
-    name: 'PREMIUM',
-    price: '$199',
-    period: '/mes',
-    features: [
-      '8 sesiones de entrenamiento',
-      'Plan de entrenamiento personalizado',
-      'Asesoría nutricional',
-      'Soporte 24/7',
-      'Análisis de composición corporal'
-    ],
-    popular: true
+    id: 2,
+    name: "Advanced",
+    price: "$75.75",
+    period: "Per month",
+    description: "Adipiscing elit sed do eusmod tempor incididunt ut labore et.",
+    isPopular: true
   },
   {
-    name: 'ELITE',
-    price: '$299',
-    period: '/mes',
-    features: [
-      '12 sesiones de entrenamiento',
-      'Programa totalmente personalizado',
-      'Planes de alimentación',
-      'Revisiones semanales',
-      'Agendamiento prioritario'
-    ],
-    popular: false
+    id: 3,
+    name: "Strong",
+    price: "$95.50",
+    period: "Per month",
+    description: "Adipiscing elit sed do eusmod tempor incididunt ut labore et."
   }
 ];
 
-const Pricing = () => {
+const Pricing: React.FC = () => {
   return (
-    <section className={styles['pricingContainer']} id="pricing">
-      <h1>PLANES DE ENTRENAMIENTO PERSONAL</h1>
-      <div className={styles['pricingWrapper']}>
-        {plans.map((plan, index) => (
-          <div
-            className={`${styles['pricingCard']} ${plan.popular ? styles['popular'] : ''}`}
-            key={index}
-          >
-            {plan.popular && <div className={styles['popularBadge']}>MÁS POPULAR</div>}
-            <h2>{plan.name}</h2>
-            <div className={styles['price']}>
-              {plan.price}<span>{plan.period}</span>
-            </div>
-            <ul className={styles['featuresList']}>
-              {plan.features.map((feature, i) => (
-                <li key={i}>{feature}</li>
-              ))}
-            </ul>
-            <a
-              href="#contact"
-              className={`${styles['pricingBtn']} ${plan.popular ? styles['popularBtn'] : ''}`}
+    <section className={styles.pricing}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <span className={styles.subtitle}>personal training</span>
+          <h2 className={styles.title}>Pricing plans</h2>
+          <p className={styles.description}>
+            Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.
+          </p>
+        </div>
+
+        <div className={styles.plans}>
+          {pricingPlans.map((plan) => (
+            <div 
+              key={plan.id} 
+              className={`${styles.plan} ${plan.isPopular ? styles.popular : ''}`}
+              aria-label={`${plan.name} plan: ${plan.price} ${plan.period}`}
             >
-              {plan.popular ? 'EMPEZAR AHORA' : 'VER MÁS'}
-            </a>
-          </div>
-        ))}
+              <h3 className={styles.planName}>{plan.name}</h3>
+              <div className={styles.price}>
+                <span className={styles.amount}>{plan.price}</span>
+                <span className={styles.period}>{plan.period}</span>
+              </div>
+              <p className={styles.planDescription}>{plan.description}</p>
+              <Button 
+                variant={plan.isPopular ? "primary" : "outline"}
+                className={styles.planButton}
+                aria-label={`Get ${plan.name} plan for ${plan.price} ${plan.period}`}
+              >
+                Get Now
+              </Button>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
-
 
 export default Pricing;
