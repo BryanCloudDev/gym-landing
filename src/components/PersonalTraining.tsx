@@ -1,12 +1,13 @@
 import React from 'react';
 
+import miImagen from '../assets/images/foto-about.jpeg';
 import styles from '../styles/PersonalTraining.module.css';
 
 const PersonalTraining: React.FC = () => {
   return (
     <section className={styles.training}>
       <div className={styles.imageContainer}>
-        <div className={styles.image} />
+        <img src={miImagen} className={styles.image} alt="Foto" />
       </div>
       <div className={styles.content}>
         <span className={styles.subtitle}>welcome to the gym</span>
