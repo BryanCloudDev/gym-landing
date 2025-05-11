@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className={styles.contact}>
+    <section id="contact" className={styles.contact}>
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.subtitle}>Get in touch</span>
@@ -27,7 +27,9 @@ const Contact: React.FC = () => {
         </div>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
-            <label htmlFor="name" className={styles.label}>Name</label>
+            <label htmlFor="name" className={styles.label}>
+              Name
+            </label>
             <input
               type="text"
               id="name"
@@ -38,7 +40,9 @@ const Contact: React.FC = () => {
             />
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor="email" className={styles.label}>Email</label>
+            <label htmlFor="email" className={styles.label}>
+              Email
+            </label>
             <input
               type="email"
               id="email"
@@ -49,7 +53,9 @@ const Contact: React.FC = () => {
             />
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor="message" className={styles.label}>Message</label>
+            <label htmlFor="message" className={styles.label}>
+              Message
+            </label>
             <textarea
               id="message"
               value={message}
@@ -58,7 +64,11 @@ const Contact: React.FC = () => {
               className={styles.textarea}
             ></textarea>
           </div>
-          <Button type="submit" variant="primary" className={styles.submitButton}>
+          <Button
+            type="submit"
+            variant="primary"
+            className={styles.submitButton}
+          >
             Send Message
           </Button>
         </form>

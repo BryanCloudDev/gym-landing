@@ -39,21 +39,24 @@ const pricingPlans: PricingPlan[] = [
 
 const Pricing: React.FC = () => {
   return (
-    <section className={styles.pricing}>
+    <section id="prices" className={styles.pricing}>
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.subtitle}>personal training</span>
           <h2 className={styles.title}>Pricing plans</h2>
           <p className={styles.description}>
-            Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.
+            Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad.
           </p>
         </div>
 
         <div className={styles.plans}>
           {pricingPlans.map((plan) => (
-            <div 
-              key={plan.id} 
-              className={`${styles.plan} ${plan.isPopular ? styles.popular : ''}`}
+            <div
+              key={plan.id}
+              className={`${styles.plan} ${
+                plan.isPopular ? styles.popular : ""
+              }`}
               aria-label={`${plan.name} plan: ${plan.price} ${plan.period}`}
             >
               <h3 className={styles.planName}>{plan.name}</h3>
@@ -62,7 +65,7 @@ const Pricing: React.FC = () => {
                 <span className={styles.period}>{plan.period}</span>
               </div>
               <p className={styles.planDescription}>{plan.description}</p>
-              <Button 
+              <Button
                 variant={plan.isPopular ? "primary" : "outline"}
                 className={styles.planButton}
                 aria-label={`Get ${plan.name} plan for ${plan.price} ${plan.period}`}

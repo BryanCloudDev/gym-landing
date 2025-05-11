@@ -45,13 +45,13 @@ const Navbar: React.FC = () => {
             <a href="#home" className={styles.navLinks} onClick={toggleMenu}>Home</a>
           </li>
           <li className={styles.navItem}>
-            <a href="#pages" className={styles.navLinks} onClick={toggleMenu}>Training</a>
+            <a href="#training" className={styles.navLinks} onClick={toggleMenu}>Training</a>
           </li>
           <li className={styles.navItem}>
-            <a href="#blog" className={styles.navLinks} onClick={toggleMenu}>Prices</a>
+            <a href="#prices" className={styles.navLinks} onClick={toggleMenu}>Prices</a>
           </li>
           <li className={styles.navItem}>
-            <a href="#contacts" className={styles.navLinks} onClick={toggleMenu}>Contact</a>
+            <a href="#contact" className={styles.navLinks} onClick={toggleMenu}>Contact</a>
           </li>
         </ul>
       </div>

@@ -8,7 +8,8 @@ const Footer = () => {
           <div className={styles.column}>
             <h3 className={styles.logo}>THE 1% PROJECT</h3>
             <p className={styles.description}>
-              Transform your body and mind with our state-of-the-art facilities and expert trainers.
+              Transform your body and mind with our state-of-the-art facilities
+              and expert trainers.
             </p>
             <div className={styles.social}>
               <a href="#" className={styles.socialLink} aria-label="Facebook">
@@ -29,22 +30,42 @@ const Footer = () => {
           <div className={styles.column}>
             <h4 className={styles.title}>Quick Links</h4>
             <ul className={styles.links}>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#classes">Classes</a></li>
-              <li><a href="#trainers">Trainers</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#classes">Classes</a>
+              </li>
+              <li>
+                <a href="#trainers">Trainers</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
             </ul>
           </div>
 
           <div className={styles.column}>
             <h4 className={styles.title}>Services</h4>
             <ul className={styles.links}>
-              <li><a href="#personal-training">Personal Training</a></li>
-              <li><a href="#group-classes">Group Classes</a></li>
-              <li><a href="#nutrition">Nutrition Planning</a></li>
-              <li><a href="#fitness">Fitness Assessment</a></li>
-              <li><a href="#cardio">Cardio Training</a></li>
+              <li>
+                <a href="#personal-training">Personal Training</a>
+              </li>
+              <li>
+                <a href="#group-classes">Sports Therapy</a>
+              </li>
+              <li>
+                <a href="#nutrition">Online Training</a>
+              </li>
+              <li>
+                <a href="#fitness">Nutrition Plans</a>
+              </li>
+              <li>
+                <a href="#cardio">Day Pass</a>
+              </li>
             </ul>
           </div>
 
@@ -53,15 +74,15 @@ const Footer = () => {
             <ul className={styles.hours}>
               <li>
                 <span>Monday - Friday:</span>
-                <span>6:00 AM - 10:00 PM</span>
+                <span>5:00 AM - 10:00 PM</span>
               </li>
               <li>
                 <span>Saturday:</span>
-                <span>8:00 AM - 8:00 PM</span>
+                <span>8:00 AM - 2:00 PM</span>
               </li>
               <li>
                 <span>Sunday:</span>
-                <span>8:00 AM - 6:00 PM</span>
+                <span>8:00 AM - 2:00 PM</span>
               </li>
             </ul>
           </div>

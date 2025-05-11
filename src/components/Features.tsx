@@ -19,34 +19,39 @@ const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
 const Features: React.FC = () => {
   const features = [
     {
-      icon: '🏋️',
-      title: 'Personalized training',
-      description: 'One on one training with an expert personal trainer.'
+      icon: "🏋️",
+      title: "Personalized Training",
+      description:
+        "Work one-on-one with a certified trainer to crush your goals with tailored workouts and expert motivation.",
     },
     {
-      icon: '💆',
-      title: 'Sports therapy',
-      description: 'Prevent injuries and recover faster and improve performance.'
-    },
-     {
-      icon: '🌐',
-      title: 'Personalized online training',
-      description: 'Train from anywhere with virtual guidance and continuous monitoring.'
+      icon: "💆",
+      title: "Sports Therapy",
+      description:
+        "Speed up recovery, prevent injuries, and keep your body performing at its best with targeted therapy sessions.",
     },
     {
-      icon: '🥗',
-      title: 'Nutrition plan',
-      description: 'Consectetur adipiscing elit, sed do eiusmod tempo.'
+      icon: "🌐",
+      title: "Online Training",
+      description:
+        "Train from anywhere with customized virtual programs and real-time feedback from your coach.",
     },
     {
-      icon: '📅',
-      title: 'Day pass',
-      description: 'Exclusive one-day access — train at your own pace in a private area.'
-    }
+      icon: "🥗",
+      title: "Nutrition Plans",
+      description:
+        "Fuel your progress with personalized meal plans designed to match your fitness journey and lifestyle.",
+    },
+    {
+      icon: "📅",
+      title: "Day Pass",
+      description:
+        "Get full access for a day — train freely, explore our space, and experience our premium setup firsthand.",
+    },
   ];
 
   return (
-    <section id="features" className={styles.features}>
+    <section id="training" className={styles.features}>
       <h2 className={styles.sectionTitle}>
         <span className={styles.subtitle}>what we offer</span>
         Achieve amazing results with our services
