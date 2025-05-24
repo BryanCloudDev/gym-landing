@@ -1,11 +1,44 @@
-# React + TypeScript + Vite
+# Gym Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a landing page for a gym, built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project follows a component-based architecture. Here's an overview of the main directories:
+
+- `src/components`: Contains reusable React components
+- `src/pages`: Contains page-level components
+- `src/styles`: Contains CSS modules for styling
+- `src/assets`: Contains static assets like images and fonts
+
+## Layout Component
+
+We use a Layout component that includes the Navbar and Footer. This ensures consistency across all pages. When creating new pages, always wrap your page content with the Layout component.
+
+Example:
+
+```tsx
+import React from 'react';
+import Layout from '../components/Layout';
+
+const NewPage: React.FC = () => {
+  return (
+    <Layout>
+      {/* Your page content here */}
+    </Layout>
+  );
+};
+
+export default NewPage;
+```
+
+## Development
+
+This project uses Vite for fast development and building. Here are some useful commands:
+
+- `npm run dev`: Start the development server
+- `npm run build`: Build the project for production
+- `npm run preview`: Preview the production build locally
 
 ## Expanding the ESLint configuration
 

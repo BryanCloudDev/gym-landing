@@ -7,7 +7,7 @@ import {
   IconUsers,
 } from "@tabler/icons-react";
 import React, { useEffect } from "react";
-
+import Layout from "../components/Layout";
 import styles from "../styles/PersonalTrainingPage.module.css";
 import { pricingPlans } from "../models/pricing-plans.model";
 
@@ -67,10 +67,11 @@ const PersonalTrainingPage: React.FC = () => {
 
   useEffect(() => {
     document.title = "Personal Training";
-  })
+  }, []);
 
   return (
-    <div className={styles.container}>
+    <Layout>
+      <div className={styles.container}>
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <span className={styles.subtitle}>personal training</span>
@@ -191,7 +192,8 @@ const PersonalTrainingPage: React.FC = () => {
           </button>
         </div>
       </section>
-    </div>
+      </div>
+    </Layout>
   );
 };
 
