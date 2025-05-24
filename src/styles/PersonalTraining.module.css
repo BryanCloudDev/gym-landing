@@ -62,17 +62,17 @@
   background-color: var(--primary-color-hover);
 }
 
-.rightImage {
+/* .rightImage {
   position: absolute;
   right: 65px;
   bottom: 50px;
   width: 40%;
   height: 60%;
-}
+} */
 
-.rightImage .image {
-  background-image: url('/public/img-004-copyright.jpg');
-}
+/* .rightImage .image {
+  background-image: url('../assets/images/foto-about.jpeg');
+} */
 
 @media (max-width: 1279px) {
   .training {

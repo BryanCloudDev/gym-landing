@@ -1,4 +1,5 @@
 import styles from '../styles/Footer.module.css';
+import { IconBrandFacebook, IconBrandInstagram, IconBrandTiktok } from "@tabler/icons-react";
 
 const Footer = () => {
   return (
@@ -9,20 +10,17 @@ const Footer = () => {
             <h3 className={styles.logo}>THE 1% PROJECT</h3>
             <p className={styles.description}>
               Transform your body and mind with our state-of-the-art facilities
-              and expert trainers.
+              and expert trainers, be the difference.
             </p>
             <div className={styles.social}>
               <a href="#" className={styles.socialLink} aria-label="Facebook">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className={styles.socialLink} aria-label="Twitter">
-                <i className="fab fa-twitter"></i>
+                <IconBrandFacebook stroke={1} />
               </a>
               <a href="#" className={styles.socialLink} aria-label="Instagram">
-                <i className="fab fa-instagram"></i>
+                <IconBrandInstagram stroke={1} />
               </a>
-              <a href="#" className={styles.socialLink} aria-label="LinkedIn">
-                <i className="fab fa-linkedin-in"></i>
+              <a href="#" className={styles.socialLink} aria-label="Tik Tok">
+                <IconBrandTiktok stroke={1} />
               </a>
             </div>
           </div>

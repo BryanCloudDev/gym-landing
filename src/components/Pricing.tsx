@@ -16,24 +16,24 @@ const pricingPlans: PricingPlan[] = [
   {
     id: 1,
     name: "Basic",
-    price: "$55.55",
+    price: "$250",
     period: "Per month",
-    description: "Adipiscing elit sed do eusmod tempor incididunt ut labore et."
+    description: "12 sessions per month",
   },
   {
     id: 2,
     name: "Advanced",
-    price: "$75.75",
+    price: "$300",
     period: "Per month",
-    description: "Adipiscing elit sed do eusmod tempor incididunt ut labore et.",
+    description: "16 sessions per month",
     isPopular: true
   },
   {
     id: 3,
     name: "Strong",
-    price: "$95.50",
+    price: "$350",
     period: "Per month",
-    description: "Adipiscing elit sed do eusmod tempor incididunt ut labore et."
+    description: "20 sessions per month",
   }
 ];
 
@@ -45,8 +45,7 @@ const Pricing: React.FC = () => {
           <span className={styles.subtitle}>personal training</span>
           <h2 className={styles.title}>Pricing plans</h2>
           <p className={styles.description}>
-            Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad.
+            Choose the plan that suits you best. We offer a variety of plans to fit your needs and budget.
           </p>
         </div>
 
