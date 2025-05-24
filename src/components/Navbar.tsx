@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { Link } from 'react-router';
 import styles from '../styles/Navbar.module.css';
 
 const Navbar: React.FC = () => {
@@ -28,19 +28,22 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
+    <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.navbarContainer}>
-        <a href="/" className={styles.navbarLogo}>
+        <Link to="/" className={styles.navbarLogo}>
           THE 1% PROJECT
-        </a>
+        </Link>
 
-        <div className={`${styles.menuIcon} ${isMenuOpen ? styles.active : ''}`} onClick={toggleMenu}>
+        <div
+          className={`${styles.menuIcon} ${isMenuOpen ? styles.active : ""}`}
+          onClick={toggleMenu}
+        >
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-        <ul className={`${styles.navMenu} ${isMenuOpen ? styles.active : ''}`}>
+        <ul className={`${styles.navMenu} ${isMenuOpen ? styles.active : ""}`}>
           <li className={styles.navItem}>
             <a href="#home" className={styles.navLinks} onClick={toggleMenu}>Home</a>
           </li>

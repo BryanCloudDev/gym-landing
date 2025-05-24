@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import styles from '../styles/Footer.module.css';
 import { IconBrandFacebook, IconBrandInstagram, IconBrandTiktok } from "@tabler/icons-react";
 
@@ -50,7 +51,7 @@ const Footer = () => {
             <h4 className={styles.title}>Services</h4>
             <ul className={styles.links}>
               <li>
-                <a href="#personal-training">Personal Training</a>
+                <Link to="/personal-training">Personal Training</Link>
               </li>
               <li>
                 <a href="#group-classes">Sports Therapy</a>

@@ -10,12 +10,12 @@ import Pricing from "./components/Pricing";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const App: React.FC = () => {
 
+const App: React.FC = () => {
   useEffect(() => {
     document.title = "Home";
   }, []);
-
+  
   return (
     <div className={styles.app}>
       <Navbar />

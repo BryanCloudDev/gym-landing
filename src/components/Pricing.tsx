@@ -2,40 +2,7 @@ import React from 'react';
 
 import styles from '../styles/Pricing.module.css';
 import Button from './Button';
-
-interface PricingPlan {
-  id: number;
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  isPopular?: boolean;
-}
-
-const pricingPlans: PricingPlan[] = [
-  {
-    id: 1,
-    name: "Basic",
-    price: "$250",
-    period: "Per month",
-    description: "12 sessions per month",
-  },
-  {
-    id: 2,
-    name: "Advanced",
-    price: "$300",
-    period: "Per month",
-    description: "16 sessions per month",
-    isPopular: true
-  },
-  {
-    id: 3,
-    name: "Strong",
-    price: "$350",
-    period: "Per month",
-    description: "20 sessions per month",
-  }
-];
+import { pricingPlans } from '../models/pricing-plans.model';
 
 const Pricing: React.FC = () => {
   return (
