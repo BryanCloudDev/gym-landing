@@ -1,39 +1,69 @@
+import React, { type JSX } from 'react';
+
 import styles from '../styles/Features.module.css';
+import { IconCalendarStar, IconMassage, IconSalad, IconTreadmill, IconWorld } from '@tabler/icons-react';
 
+interface FeatureProps {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}
 
-const Features = () => {
-    return (
-          <section className={styles.overviewSection} id="sobre">
-      <div className={styles.container}>
-        <h2 className={styles.title}>SERVICIOS EXCLUSIVOS PARA TI</h2>
-        <p className={styles.subtitle}>
-          Descubre todo lo que ofrecemos para ayudarte a alcanzar tus objetivos.
-        </p>
-        <div className={styles.servicesGrid}>
-          <div className={styles.card}>
-            <h3>Entrenamiento Personalizado</h3>
-            <p>Sesiones uno a uno con entrenadores expertos para maximizar tu rendimiento.</p>
-          </div>
-          <div className={styles.card}>
-            <h3>Terapia Deportiva</h3>
-            <p>Prevención de lesiones, recuperación y mejora del rendimiento físico.</p>
-          </div>
-          <div className={styles.card}>
-            <h3>Planes Personalizados en Línea</h3>
-            <p>Entrena desde cualquier lugar con asesoramiento virtual y seguimiento continuo.</p>
-          </div>
-          <div className={styles.card}>
-            <h3>Nutrición</h3>
-            <p>Guías alimenticias adaptadas a tus metas y estilo de vida.</p>
-          </div>
-          <div className={styles.card}>
-            <h3>Pase Diario al Gimnasio</h3>
-            <p>Acceso exclusivo por un día, entrena a tu ritmo en un area exclusiva.</p>
-          </div>
-        </div>
+const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
+  <div className={styles.feature}>
+    {icon}
+    <h3 className={styles.title}>{title}</h3>
+    <p className={styles.description}>{description}</p>
+  </div>
+);
+
+const Features: React.FC = () => {
+  const features = [
+    {
+      icon: <IconTreadmill stroke={2} size={90} className={styles.icon} />,
+      title: "Personalized Training",
+      description:
+        "Work one-on-one with a certified trainer to crush your goals with tailored workouts and expert motivation.",
+    },
+    {
+      icon: <IconMassage stroke={2} size={90} className={styles.icon} />,
+      title: "Sports Therapy",
+      description:
+        "Speed up recovery, prevent injuries, and keep your body performing at its best with targeted therapy sessions.",
+    },
+    {
+      icon: <IconWorld stroke={2} size={90} className={styles.icon} />,
+      title: "Online Training",
+      description:
+        "Train from anywhere with customized virtual programs and real-time feedback from your coach.",
+    },
+    {
+      icon: <IconSalad stroke={2} size={90} className={styles.icon} />,
+      title: "Nutrition Plans",
+      description:
+        "Fuel your progress with personalized meal plans designed to match your fitness journey and lifestyle.",
+    },
+    {
+      icon: <IconCalendarStar stroke={2} size={90} className={styles.icon} />,
+      title: "Day Pass",
+      description:
+        "Get full access for a day — train freely, explore our space, and experience our premium setup firsthand.",
+    },
+  ];
+
+  return (
+    <section id="training" className={styles.features}>
+      <h2 className={styles.sectionTitle}>
+        <span className={styles.subtitle}>what we offer</span>
+        Achieve amazing results with our services
+      </h2>
+      <div className={styles.featureList}>
+        {features.map((feature, index) => (
+          <Feature key={index} {...feature} />
+        ))}
       </div>
     </section>
-    );
+  );
 };
 
 export default Features;

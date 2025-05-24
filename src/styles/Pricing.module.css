@@ -1,122 +1,108 @@
-.pricingContainer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  text-align: center;
+.pricing {
+  background-color: var(--third-color);
+  padding: 80px 0;
 }
 
-.pricingWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+.container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  color: var(--primary-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.description {
+  color: #96999F;
+  font-size: 1.1rem;
+  max-width: 600px;
   margin: 0 auto;
 }
 
-.pricingCard {
-  background-color: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  width: 100%;
-  max-width: 300px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.plans {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  border: 1px solid #e0e0e0;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.pricingCard:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.plan {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 40px;
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.plan:hover {
+  transform: translateY(-10px);
 }
 
 .popular {
-  border: 2px solid #ff4500;
+  border: 2px solid var(--primary-color);
 }
 
-.popularBadge {
-  background-color: #ff4500;
-  color: #fff;
-  padding: 0.5rem;
-  border-radius: 0.3rem;
-  margin-bottom: 1rem;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.pricingCard h2 {
+.planName {
+  color: #ffffff;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #333;
+  margin-bottom: 20px;
 }
 
 .price {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  color: #ff4500;
+  margin-bottom: 20px;
 }
 
-.price span {
+.amount {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.period {
+  color: #96999F;
   font-size: 1rem;
-  color: #666;
 }
 
-.featuresList {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 2rem;
-  text-align: left;
+.planDescription {
+  color: #96999F;
+  font-size: 1rem;
+  margin-bottom: 30px;
 }
 
-.featuresList li {
-  margin-bottom: 0.5rem;
-  color: #444;
-}
-
-.pricingBtn {
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.3rem;
-  text-decoration: none;
-  transition: background-color 0.2s ease-in-out;
-  font-weight: bold;
+.planButton {
   width: 100%;
-  text-align: center;
-}
-
-.pricingBtn:hover {
-  background-color: #0056b3;
-}
-
-.popularBtn {
-  background-color: #ff4500;
-  color: #fff;
-}
-
-.popularBtn:hover {
-  background-color: #cc3700;
 }
 
 @media (max-width: 768px) {
-  .pricingWrapper {
-    gap: 1.5rem;
+  .pricing {
+    padding: 60px 0;
   }
-  .pricingCard {
-    max-width: 100%;
-  }
-}
 
-@media (max-width: 480px) {
-  .price {
-    font-size: 1.5rem;
+  .title {
+    font-size: 2rem;
   }
-  .price span {
-    font-size: 0.8rem;
+
+  .plan {
+    width: 100%;
+    max-width: 300px;
   }
 }
