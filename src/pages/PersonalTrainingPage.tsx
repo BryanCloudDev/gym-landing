@@ -4,7 +4,6 @@ import {
   IconHeartbeat,
   IconScale,
   IconClock,
-  IconUsers,
 } from "@tabler/icons-react";
 import React, { useEffect } from "react";
 import Layout from "../components/Layout";
@@ -29,39 +28,28 @@ const PersonalTrainingPage: React.FC = () => {
   const benefits = [
     {
       icon: <IconTarget stroke={2} size={48} />,
-      title: "Customized Programs",
-      description:
-        "Our expert trainers design workout plans tailored to your specific goals, fitness level, and schedule. We take into account your preferences, any injuries or limitations, and continuously adjust your program as you progress.",
+      title: "Personalized Workouts",
+      description: "One-on-one training sessions with your dedicated private trainer, customized to your specific needs and goals.",
     },
     {
       icon: <IconMedal stroke={2} size={48} />,
-      title: "Expert Guidance",
-      description:
-        "Work with certified trainers who are passionate about helping you achieve your fitness goals. Our trainers stay up-to-date with the latest fitness trends and research to provide you with the most effective training methods.",
+      title: "Comprehensive Assessments",
+      description: "Regular evaluations of your strength, mobility, and overall progress to ensure you're on track to meet your fitness goals.",
     },
     {
       icon: <IconHeartbeat stroke={2} size={48} />,
-      title: "Progress Tracking",
-      description:
-        "We use advanced tracking tools to monitor your progress. Regular assessments help us adjust your program and celebrate your achievements. You'll have access to detailed reports showing your improvements in strength, endurance, and body composition.",
+      title: "Level-Based Programs",
+      description: "Tailored routines designed for your experience level - whether you're a beginner, intermediate, or advanced athlete.",
     },
     {
       icon: <IconScale stroke={2} size={48} />,
-      title: "Nutrition Support",
-      description:
-        "Receive comprehensive nutrition guidance to complement your training and maximize results. Our nutrition experts will help you develop healthy eating habits, create meal plans, and make smart choices to fuel your workouts and recovery.",
+      title: "Progress Tracking",
+      description: "Keep track of your journey with our personalized tracking app or notebook, monitoring your improvements and achievements.",
     },
     {
       icon: <IconClock stroke={2} size={48} />,
-      title: "Flexible Scheduling",
-      description:
-        "We understand that life can be busy. That's why we offer flexible scheduling options to fit training into your lifestyle. Morning, afternoon, or evening sessions are available to accommodate your needs.",
-    },
-    {
-      icon: <IconUsers stroke={2} size={48} />,
-      title: "Supportive Community",
-      description:
-        "Join a community of like-minded individuals on their fitness journeys. We foster a supportive environment where you can share experiences, challenges, and successes with fellow members and trainers.",
+      title: "Flexible Packages",
+      description: "Choose from convenient monthly packages or individual session plans to fit your schedule and budget.",
     },
   ];
 
