@@ -13,7 +13,7 @@ const Footer = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -44,11 +44,10 @@ const Footer = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="#about">About</a>
+                <Link to="/about">About</Link>
               </li>
-
               <li>
-                <a href="#trainers">Trainers</a>
+                <Link to="/trainers">Trainers</Link>
               </li>
               <li>
                 <Link

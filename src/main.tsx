@@ -9,6 +9,7 @@ import DayPassPage from "./pages/DayPassPage";
 import OnlineTrainingPage from "./pages/OnlineTrainingPage";
 import NutritionPlansPage from "./pages/NutritionPlansPage";
 import ScrollTopLayout from "./components/ScrollTopLayout";
+import AboutPage from "./pages/AboutPage";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         path: "/nutrition-plans",
         element: <NutritionPlansPage />,
       },
+      {
+        path: "/about",
+        element: <AboutPage />
+      }
     ],
   },
 ]);
