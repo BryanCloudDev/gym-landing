@@ -1,12 +1,19 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import styles from "../styles/Footer.module.css";
 import {
   IconBrandFacebook,
   IconBrandInstagram,
   IconBrandTiktok,
 } from "@tabler/icons-react";
+import { useState } from "react";
 
 const Footer = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -34,19 +41,32 @@ const Footer = () => {
             <h4 className={styles.title}>Quick Links</h4>
             <ul className={styles.links}>
               <li>
-                <a href="#home">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
                 <a href="#about">About</a>
               </li>
-              <li>
-                <a href="#classes">Classes</a>
-              </li>
+
               <li>
                 <a href="#trainers">Trainers</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <Link
+                  to="/#contact"
+                  className={styles.navLinks}
+                  onClick={(e: React.MouseEvent) => {
+                    e.preventDefault();
+                    toggleMenu();
+                    if (location.pathname !== "/") {
+                      navigate("/#contact");
+                    } else {
+                      const element = document.getElementById("contact");
+                      element?.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
