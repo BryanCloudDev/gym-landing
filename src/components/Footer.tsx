@@ -63,7 +63,7 @@ const Footer = () => {
                 <a href="#fitness">Nutrition Plans</a>
               </li>
               <li>
-                <a href="#cardio">Day Pass</a>
+                <Link to="/day-pass">Day Pass</Link>
               </li>
             </ul>
           </div>
