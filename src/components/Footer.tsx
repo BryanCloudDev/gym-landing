@@ -64,7 +64,7 @@ const Footer = () => {
                 <Link to="/online-training">Online Training</Link>
               </li>
               <li>
-                <a href="#fitness">Nutrition Plans</a>
+                <Link to="/nutrition-plans">Nutrition Plans</Link>
               </li>
               <li>
                 <Link to="/day-pass">Day Pass</Link>

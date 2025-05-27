@@ -7,6 +7,7 @@ import PersonalTrainingPage from "./pages/PersonalTrainingPage";
 import SportsTherapyPage from "./pages/SportsTherapyPage";
 import DayPassPage from "./pages/DayPassPage";
 import OnlineTrainingPage from "./pages/OnlineTrainingPage";
+import NutritionPlansPage from "./pages/NutritionPlansPage";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/online-training",
     element: <OnlineTrainingPage />,
+  },
+  {
+    path: "/nutrition-plans",
+    element: <NutritionPlansPage/>,
   }
 ]);
 

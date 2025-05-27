@@ -1,0 +1,316 @@
+.container {
+  background-color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--third-color);
+  padding: 100px 65px;
+  background-image: url('../assets/images/hero.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  position: relative;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--primary-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.description {
+  color: #96999F;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Services Section */
+.services {
+  padding: 80px 65px;
+  background-color: var(--secondary-color);
+}
+
+.sectionTitle {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.sectionSubtitle {
+  display: block;
+  color: var(--primary-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.serviceIcon {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.serviceTitle {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.serviceDescription {
+  color: #96999F;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Process Section */
+.process {
+  padding: 80px 65px;
+  background-color: var(--third-color);
+}
+
+.processList {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.processList li {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.processList h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.processList p {
+  color: #96999F;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+/* Pricing Section */
+.pricing {
+  padding: 80px 65px;
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricingBox {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease;
+}
+
+.pricingBox:hover {
+  transform: translateY(-5px);
+}
+
+.featured {
+  border-color: var(--primary-color);
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.pricingTitle {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.pricingPrice {
+  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pricingPeriod {
+  color: #96999F;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.pricingFeatures {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.pricingFeatures li {
+  color: #96999F;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.pricingFeatures li::before {
+  content: "✓";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+.pricingButton {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.pricingButton:hover {
+  background-color: var(--primary-color-hover);
+}
+
+/* CTA Section */
+.cta {
+  padding: 80px 65px;
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.ctaDescription {
+  color: #96999F;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.ctaButton {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--primary-color-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero, .services, .process, .pricing, .cta {
+    padding: 60px 40px;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricingGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 30px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .pricingGrid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero, .services, .process, .pricing, .cta {
+    padding: 40px 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+}
