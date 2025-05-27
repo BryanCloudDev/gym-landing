@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate, useLocation } from 'react-router';
 import styles from '../styles/Navbar.module.css';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -45,16 +47,63 @@ const Navbar: React.FC = () => {
 
         <ul className={`${styles.navMenu} ${isMenuOpen ? styles.active : ""}`}>
           <li className={styles.navItem}>
-            <a href="#home" className={styles.navLinks} onClick={toggleMenu}>Home</a>
+            <Link to="/" className={styles.navLinks} onClick={toggleMenu}>
+              Home
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="#training" className={styles.navLinks} onClick={toggleMenu}>Training</a>
+            <Link
+              to="/#training"
+              className={styles.navLinks}
+              onClick={(e: React.MouseEvent) => {
+                e.preventDefault();
+                toggleMenu();
+                if (location.pathname !== '/') {
+                  navigate('/#training');
+                } else {
+                  const element = document.getElementById('training');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Training
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="#prices" className={styles.navLinks} onClick={toggleMenu}>Prices</a>
+            <Link
+              to="/#prices"
+              className={styles.navLinks}
+              onClick={(e: React.MouseEvent) => {
+                e.preventDefault();
+                toggleMenu();
+                if (location.pathname !== '/') {
+                  navigate('/#prices');
+                } else {
+                  const element = document.getElementById('prices');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Prices
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="#contact" className={styles.navLinks} onClick={toggleMenu}>Contact</a>
+            <Link
+              to="/#contact"
+              className={styles.navLinks}
+              onClick={(e: React.MouseEvent) => {
+                e.preventDefault();
+                toggleMenu();
+                if (location.pathname !== '/') {
+                  navigate('/#contact');
+                } else {
+                  const element = document.getElementById('contact');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
