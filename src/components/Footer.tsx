@@ -1,6 +1,10 @@
-import { Link } from 'react-router';
-import styles from '../styles/Footer.module.css';
-import { IconBrandFacebook, IconBrandInstagram, IconBrandTiktok } from "@tabler/icons-react";
+import { Link } from "react-router";
+import styles from "../styles/Footer.module.css";
+import {
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandTiktok,
+} from "@tabler/icons-react";
 
 const Footer = () => {
   return (
@@ -57,7 +61,7 @@ const Footer = () => {
                 <Link to="/sports-therapy">Sports Therapy</Link>
               </li>
               <li>
-                <a href="#nutrition">Online Training</a>
+                <Link to="/online-training">Online Training</Link>
               </li>
               <li>
                 <a href="#fitness">Nutrition Plans</a>

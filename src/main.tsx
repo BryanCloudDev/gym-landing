@@ -6,6 +6,7 @@ import App from './App'
 import PersonalTrainingPage from "./pages/PersonalTrainingPage";
 import SportsTherapyPage from "./pages/SportsTherapyPage";
 import DayPassPage from "./pages/DayPassPage";
+import OnlineTrainingPage from "./pages/OnlineTrainingPage";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/day-pass",
     element: <DayPassPage />
+  },
+  {
+    path: "/online-training",
+    element: <OnlineTrainingPage />,
   }
 ]);
 
