@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router';
-import styles from '../styles/Navbar.module.css';
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate, useLocation } from "react-router";
+import styles from "../styles/Navbar.module.css";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,10 +22,10 @@ const Navbar: React.FC = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -46,24 +46,6 @@ const Navbar: React.FC = () => {
         </div>
 
         <ul className={`${styles.navMenu} ${isMenuOpen ? styles.active : ""}`}>
-          <li className={styles.navItem}>
-            <Link
-              to="/"
-              className={styles.navLinks}
-              onClick={(e: React.MouseEvent) => {
-                e.preventDefault();
-                toggleMenu();
-                if (location.pathname !== "/") {
-                  navigate("/");
-                } else {
-                  const element = document.getElementById("training");
-                  element?.scrollIntoView({ behavior: "smooth" });
-                }
-              }}
-            >
-              Home
-            </Link>
-          </li>
           <li className={styles.navItem}>
             <Link
               to="/#training"
