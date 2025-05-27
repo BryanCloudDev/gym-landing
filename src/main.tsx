@@ -4,6 +4,7 @@ import { StrictMode } from 'react'
 
 import App from './App'
 import PersonalTrainingPage from "./pages/PersonalTrainingPage";
+import SportsTherapyPage from "./pages/SportsTherapyPage";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/personal-training",
     element: <PersonalTrainingPage />,
+  },
+  {
+    path: "/sports-therapy",
+    element: <SportsTherapyPage />,
   },
 ]);
 

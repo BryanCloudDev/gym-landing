@@ -54,7 +54,7 @@ const Footer = () => {
                 <Link to="/personal-training">Personal Training</Link>
               </li>
               <li>
-                <a href="#group-classes">Sports Therapy</a>
+                <Link to="/sports-therapy">Sports Therapy</Link>
               </li>
               <li>
                 <a href="#nutrition">Online Training</a>
