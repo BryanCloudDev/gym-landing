@@ -10,6 +10,7 @@ import OnlineTrainingPage from "./pages/OnlineTrainingPage";
 import NutritionPlansPage from "./pages/NutritionPlansPage";
 import ScrollTopLayout from "./components/ScrollTopLayout";
 import AboutPage from "./pages/AboutPage";
+import TrainersPage from "./pages/TrainersPage";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutPage />
+      },
+      {
+        path: "/trainers",
+        element: <TrainersPage />
       }
     ],
   },
