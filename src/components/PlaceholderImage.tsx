@@ -1,27 +1,34 @@
 import React from 'react';
 
 interface PlaceholderImageProps {
-  width: number;
-  height: number;
   text: string;
-  backgroundColor: string;
+  width?: string;
+  height?: string;
+  backgroundColor?: string;
 }
 
-const PlaceholderImage: React.FC<PlaceholderImageProps> = ({ width, height, text, backgroundColor }) => {
+const PlaceholderImage: React.FC<PlaceholderImageProps> = ({
+  text,
+  width = '100%',
+  height = '400px',
+  backgroundColor = '#B81414'
+}) => {
+  const style: React.CSSProperties = {
+    width,
+    height,
+    backgroundColor,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'white',
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    borderRadius: '8px',
+  };
+
   return (
-    <div
-      style={{
-        width: `${width}px`,
-        height: `${height}px`,
-        backgroundColor,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: 'white',
-        fontSize: '20px',
-        fontWeight: 'bold',
-      }}
-    >
+    <div style={style}>
       {text}
     </div>
   );
