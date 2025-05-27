@@ -47,7 +47,20 @@ const Navbar: React.FC = () => {
 
         <ul className={`${styles.navMenu} ${isMenuOpen ? styles.active : ""}`}>
           <li className={styles.navItem}>
-            <Link to="/" className={styles.navLinks} onClick={toggleMenu}>
+            <Link
+              to="/"
+              className={styles.navLinks}
+              onClick={(e: React.MouseEvent) => {
+                e.preventDefault();
+                toggleMenu();
+                if (location.pathname !== "/") {
+                  navigate("/");
+                } else {
+                  const element = document.getElementById("training");
+                  element?.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
               Home
             </Link>
           </li>
@@ -58,11 +71,11 @@ const Navbar: React.FC = () => {
               onClick={(e: React.MouseEvent) => {
                 e.preventDefault();
                 toggleMenu();
-                if (location.pathname !== '/') {
-                  navigate('/#training');
+                if (location.pathname !== "/") {
+                  navigate("/#training");
                 } else {
-                  const element = document.getElementById('training');
-                  element?.scrollIntoView({ behavior: 'smooth' });
+                  const element = document.getElementById("training");
+                  element?.scrollIntoView({ behavior: "smooth" });
                 }
               }}
             >
@@ -76,11 +89,11 @@ const Navbar: React.FC = () => {
               onClick={(e: React.MouseEvent) => {
                 e.preventDefault();
                 toggleMenu();
-                if (location.pathname !== '/') {
-                  navigate('/#prices');
+                if (location.pathname !== "/") {
+                  navigate("/#prices");
                 } else {
-                  const element = document.getElementById('prices');
-                  element?.scrollIntoView({ behavior: 'smooth' });
+                  const element = document.getElementById("prices");
+                  element?.scrollIntoView({ behavior: "smooth" });
                 }
               }}
             >
@@ -94,11 +107,11 @@ const Navbar: React.FC = () => {
               onClick={(e: React.MouseEvent) => {
                 e.preventDefault();
                 toggleMenu();
-                if (location.pathname !== '/') {
-                  navigate('/#contact');
+                if (location.pathname !== "/") {
+                  navigate("/#contact");
                 } else {
-                  const element = document.getElementById('contact');
-                  element?.scrollIntoView({ behavior: 'smooth' });
+                  const element = document.getElementById("contact");
+                  element?.scrollIntoView({ behavior: "smooth" });
                 }
               }}
             >
